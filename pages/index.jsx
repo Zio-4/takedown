@@ -9,7 +9,7 @@ const Page = () => {
       <h1>Index Page</h1>
       <Link href='/notes'>
         <a>
-          Link
+          Notes
         </a>
       </Link>
     </div>
