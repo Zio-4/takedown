@@ -1,5 +1,5 @@
 import nc from 'next-connect'
-import notes from '../../../src/data/data'
+import notes from '../../../data.js'
 
 const getNote = id => notes.find(n => n.id === parseInt(id))
 

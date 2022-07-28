@@ -1,5 +1,5 @@
 import nc from 'next-connect'
-import notes from '../../../data/data'
+import notes from '../../../data.js'
 
 const handler = nc()
     .post((req, res) => {

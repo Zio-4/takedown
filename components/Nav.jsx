@@ -2,8 +2,6 @@
 import { jsx } from 'theme-ui'
 import Link from 'next/link'
 
-console.log('p', process.env.HELP_APP_URL)
-
 const Nav = () => (
 
   <header sx={{height: '60px', width: '100vw', bg: 'primary', borderBottom: '1px solid', borderColor: 'primary'}}>

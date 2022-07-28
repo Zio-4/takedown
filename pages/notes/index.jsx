@@ -2,8 +2,7 @@
 import { jsx } from 'theme-ui'
 import Link from 'next/link'
 
-const Index = () => {
-  const notes = new Array(15).fill(1).map((e, i) => ({id: i, title: `This is my note ${i}`}))
+const Index = ({ notes }) => {
 
   return (
     <div sx={{variant: 'containers.page'}}>
@@ -27,3 +26,12 @@ const Index = () => {
 }
 
 export default Index
+
+// Using serverSideProps here to test
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/note/`)
+  const { data } = await res.json()
+  return {
+    props: { notes: data }
+  }
+}
